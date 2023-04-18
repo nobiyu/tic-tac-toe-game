@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: "Light";
+    /*Can be any text*/
+    src: local("PressStart2P"), url("./PressStart2P-Regular.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font: 14px "light";
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../public/bg.png');
+}
+
+ol,
+ul {
+    padding-left: 30px;
+    list-style-type: none;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: #FBF1F9;
+    border: 1px solid #F8CCF9;
+    border-radius: 5px;
+    color: #7E4B8B;
+    float: left;
+    font-family: light;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 80px;
+    width: 80px;
+    margin: 5px;
+    padding: 0;
+    text-align: center;
+}
+
+.square:hover {
+    border-color: #7E4B8B;
+    cursor: pointer;
+}
+
+.square:focus {
+    background-color: #AAAAAA;
+}
+
+.header {
+    font-size: 40px;
+    font: 60px;
+    margin-bottom: 50px;
+}
+
+.game {
+    padding-top: 100px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    left: 0%;
+    text-align: center;
+}
+
+.game-board {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info {
+    position: relative;
+    padding: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    font-size: 20px;
+}
+
+.info {
+    padding-top: 25px;
+}
+
+.moveButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #7E4B8B;
+    border: none;
+    color: #FBF1F9;
+    font: 12px light;
+}
+
+.moves-list {
+    position: absolute;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    left: 45%;
+    transform: translate(-50%, 0);
+    gap: 8px;
 }
